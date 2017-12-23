@@ -3,7 +3,9 @@
 ### Summary
 
 Task was to predict remaining useful life of the engines. Given input was a series of sensor and configuration data for each engine. My minimum plan was to explore the input data, try to understand the structure of the data and fiqure out if there are any obvious patterns. Then implement a quick-and-dirty model that predicts at least something and is better than some 'dumb' baseline. If time allows, come back to data exploration and try to build a more robust and better model.
-To speed up prototyping I focused on dataset1 (dataset_id='FD001'). Hoping that techniques developed for dataset1 are transferrable to other datasets. 
+To speed up prototyping I focused on dataset1 (dataset_id='FD001'). Hoping that techniques developed for dataset1 are transferrable to other datasets.
+
+* Source code and visuals: [explorer.ipynb](https://github.com/urmaspitsi/mt/blob/master/explorer.ipynb)
 
 #### Prediction results on Dataset1:
 * Baseline estimate with constant prediction errors on the test set: 'mae'=36 and 'rmse'=41.
