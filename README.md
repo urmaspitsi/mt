@@ -28,22 +28,22 @@ Because of time constraint I treated Test set as 'Validation set'. Ideally we sh
 
 
 ### Thoughts on data
-Sensor data exhibit pretty good convergence and underlying trendline, which suggest the data could be modelled very well.
-At the same time sensor data seems to exhibit quite good randomness on a local scale. Meaning it resembles a normal random walk. Eg terminal values of sensor data by unit_id follow normal distribution quite closely.
+* Sensor data exhibit pretty good convergence and underlying trendline, which suggest the data could be modelled very well.
+* At the same time sensor data seems to exhibit quite good randomness on a local scale. Meaning it resembles a normal random walk. Eg terminal values of sensor data by unit_id follow normal distribution quite closely.
 
 
 ### Next steps
 #### Data preprocessing and analytics
-use train-validation split and cross validation to properly train the model
-training generator: produces infinite stream of randomized training samples
+* use train-validation split and cross validation to properly train the model
+* training generator: produces infinite stream of randomized training samples
 
 
 #### Data exploration
-more data exploration
-correlation between sensors
-autocorrelation in each sensor series
-does configuration settings matter and how
+* more data exploration
+* correlation between sensors
+* autocorrelation in each sensor series
+* does configuration settings matter and how
 
 #### Models
-stochastic methods: autoregressive models etc.
-apply deep learning: LSTM; needs proper preprocessing: data scaling and fitting
+* stochastic methods: autoregressive models etc.
+* apply deep learning: LSTM; needs proper preprocessing: data scaling and fitting
