@@ -49,3 +49,4 @@ Because of time constraint I treated Test set as 'Validation set'. Ideally we sh
 #### Models
 * stochastic methods: autoregressive models etc.
 * apply deep learning: LSTM; needs proper preprocessing: data scaling and fitting
+* rephrase problem into binary classication and model as confidence prediction eg: confidence that engine works atleast n cycles is >=99%; suppose relevant horizon is 10 cycles, we could ask are we at least 99% sure that engine works at least 10 more cycles. If answer is no, then engine goes to repair, otherwise ask the same question again after each succesful cycle.
