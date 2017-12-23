@@ -9,7 +9,8 @@ To speed up prototyping I focused on dataset1 (dataset_id='FD001'). Hoping that 
 * Baseline estimate with constant prediction errors on the test set: 'mae'=36 and 'rmse'=41.
 * Best model prediction errors on the test set: 'mae'=18 and 'rmse'=23.
 
-Best model was in fact quite simplistic and 'naive' approach using RandomForestClassifier as predictor. I am pretty sure it is far from optimal.
+Best model was in fact quite simplistic and 'naive' approach using RandomForestClassifier as predictor. Main motivation for choosing this type of solution was that I wanted to implement rather quickly a robust model that works. Timeframe was critical for me, so that priority was to get something working and prepare [presentation](https://github.com/urmaspitsi/mt/blob/master/explorer.ipynb) with some useful visuals.
+I am pretty sure the chosen model and its' implementation is far from optimal.
 
 #### Model logic:
 * loop through train set
