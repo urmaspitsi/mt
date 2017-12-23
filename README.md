@@ -16,7 +16,7 @@ Best model was in fact quite simplistic and 'naive' approach using RandomForestC
 #### Model logic:
 * loop through train set
 * for each unit_id:
-** fit a predictor with sensor data as X and remaing cylces as Y
+fit a predictor with sensor data as X and remaing cylces as Y
 
 * This results in a list of predictors: one for each unit_id.
 * Run all predictors over the test set and choose 5 best.
