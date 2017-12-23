@@ -35,6 +35,7 @@ Because of time constraint I treated Test set as 'Validation set'. Ideally we sh
 * At the same time sensor data seems to exhibit quite good randomness on a local scale. Meaning it resembles a normal random walk. Eg terminal values of sensor data by unit_id follow normal distribution quite closely.
 * Out of 21 sensors only some seem to be relevant. This provides good dimensionality reduction
 * Different datasets have different 'relevant' sensors. It could be related to different configuration settings that I left out of focus at the moment. 
+* Some 'relevant' sensors make predictions worse. Eg in Dataset3, from top 10 highest variance sensors only sensors 4,11,17,3 provide good results. As sensors 15,20,21,12,7,10 produce very bad results ceteris paribus. Similar situation occurs for Dataset2 and Dataset4. This needs further investigator. Maybe there are natural reasons why in these cases some sensors lead to random prediction (configuration settings?).
 
 ### Next steps
 #### Data preprocessing and analytics
