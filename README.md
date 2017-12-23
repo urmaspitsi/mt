@@ -2,7 +2,7 @@
 
 ### Summary
 
-Task was to predict remaining useful life for engines. Given input is a series of sensor and configuration data for each engine. My minimum plan was to explore the input data, try to understand the structure of the data and fiqure out if there are any obvious patterns. Then implement a quick-and-dirty model that predicts at least something and is better than some 'dumb' baseline. If time allows, come back to data exploration and try to build a more robust and better model.
+Task was to predict remaining useful life of the engines. Given input was a series of sensor and configuration data for each engine. My minimum plan was to explore the input data, try to understand the structure of the data and fiqure out if there are any obvious patterns. Then implement a quick-and-dirty model that predicts at least something and is better than some 'dumb' baseline. If time allows, come back to data exploration and try to build a more robust and better model.
 To speed up prototyping I focused on dataset1 (dataset_id='FD001'). Hoping that techniques developed for dataset1 are transferrable to other datasets. 
 
 #### Prediction results on Dataset1:
@@ -30,16 +30,17 @@ Because of time constraint I treated Test set as 'Validation set'. Ideally we sh
 ### Thoughts on data
 * Sensor data exhibit pretty good convergence and underlying trendline, which suggest the data could be modelled very well.
 * At the same time sensor data seems to exhibit quite good randomness on a local scale. Meaning it resembles a normal random walk. Eg terminal values of sensor data by unit_id follow normal distribution quite closely.
-
+* Out of 21 sensors only some seem to be relevant. This provides good dimensionality reduction
+* Different datasets have different 'relevant' sensors. It could be related to different configuration settings that I left out of focus at the moment. 
 
 ### Next steps
 #### Data preprocessing and analytics
 * use train-validation split and cross validation to properly train the model
 * training generator: produces infinite stream of randomized training samples
-
+* error analysis: understand model behaviour and which conditions produce largest errors etc.
 
 #### Data exploration
-* more data exploration
+* more data exploration and visuals
 * correlation between sensors
 * autocorrelation in each sensor series
 * does configuration settings matter and how
