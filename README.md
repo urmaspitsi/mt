@@ -6,17 +6,15 @@ Task was to predict remaining useful life for engines. Given input is a series o
 To speed up prototyping I focused on dataset1 (dataset_id='FD001'). Hoping that techniques developed for dataset1 are transferrable to other datasets. 
 
 #### Prediction results on Dataset1:
-* Baseline estimate with constant prediction errors on the test set:
-'mae'=36 and 'rmse'=41.
-* Best model prediction errors on the test set:
-'mae'=18 and 'rmse'=23.
+* Baseline estimate with constant prediction errors on the test set: 'mae'=36 and 'rmse'=41.
+* Best model prediction errors on the test set: 'mae'=18 and 'rmse'=23.
 
 Best model was in fact quite simplistic and 'naive' approach using RandomForestClassifier as predictor. I am pretty sure it is far from optimal.
 
 #### Model logic:
 * loop through train set
-* for each unit_id:
-fit a predictor with sensor data as X and remaing cylces as Y
+* for each unit_id: 
+*  * fit a predictor with sensor data as X and remaing cylces as Y
 
 * This results in a list of predictors: one for each unit_id.
 * Run all predictors over the test set and choose 5 best.
