@@ -14,14 +14,14 @@ To speed up prototyping I focused on dataset1 (dataset_id='FD001'). Hoping that 
 Best model was in fact quite simplistic and 'naive' approach using RandomForestClassifier as predictor. I am pretty sure it is far from optimal.
 
 #### Model logic:
-loop through train set
-for each unit_id:
+* loop through train set
+* for each unit_id:
 -- fit a predictor with sensor data as X and remaing cylces as Y
 
-Thist results in a list of predictors: one for each unit_id.
+* This results in a list of predictors: one for each unit_id.
 -- Run all predictors over the test set and choose 5 best.
 
-Final prediction is the average of best 5 predictions.
+* Final prediction is the average of best 5 predictions.
 
 #### Comments
 Because of time constraint I treated Test set as 'Validation set'. Ideally we should split training data into train and validation samples. Train our model on train set trying to minimize prediction error on validation set. Later use given Test set as the ultimate truth of how our model behaves. 
